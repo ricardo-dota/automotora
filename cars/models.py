@@ -123,6 +123,10 @@ class Cars(models.Model):
     def __str__(self):
         return self.car_title
 
+    class Meta:
+        verbose_name  =" Auto"
+        verbose_name_plural = "Autos"
+
 
 
 
