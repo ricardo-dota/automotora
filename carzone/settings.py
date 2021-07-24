@@ -29,7 +29,7 @@ DEBUG = False
 
 LOGIN_REDIRECT_URL = 'dashboard'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['damp-thicket-58888.herokuapp.com']
 
 
 # Application definition
