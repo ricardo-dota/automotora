@@ -102,7 +102,7 @@ WSGI_APPLICATION = 'carzone.wsgi.application'
 #    }
 #}
 
-DATABASES = {'default': dj_database_url.config(default='postgres://postgres:123456@localhost/carzone_db')}
+DATABASES = {'default': dj_database_url.config(default='postgres://liiaxskrrcdyfe:81b50403abf93abcef847aa73129911840ba132ef5ca228548cd6bf23e06a23f@ec2-52-1-20-236.compute-1.amazonaws.com:5432/da0pj6m6gc3k3b')}
 
 
 
