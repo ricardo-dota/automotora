@@ -22,9 +22,12 @@
         <!-- Main title -->
         <div class="main-title text-center">
             <h1>Contact <span>Us</span></h1>
+            {% include 'includes/messages.html' %}
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
         </div>
-        <form action="#" method="POST" enctype="multipart/form-data">
+        
+        <form action="{% url 'contact' %}" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
             <div class="row">
                 <div class="col-lg-7">
                     <div class="row">

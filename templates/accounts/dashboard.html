@@ -1,0 +1,55 @@
+{% extends 'base.html '%}
+{% load static %}
+{% block content %}
+
+
+<div class="sub-banner overview-bgi">
+    <div class="container breadcrumb-area">
+        <div class="breadcrumb-areas">
+            <h1>Dashboard</h1>
+            <ul class="breadcrumbs">
+                <li><a href="{% url 'home'%}">Home</a></li>
+                <li class="active">{{ user.first_name }}</li> 
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div class="container mt-50 mb-50">
+	{% include 'includes/messages.html' %}
+	<div class="main-title" style="text-align:left !important;">
+            <h1>Welcome <span>{{ user.first_name }}</span></h1>
+            <p>Here are the cars that you have inquired about</p>
+        </div>
+	<table class="table table-hover">
+	  <thead>
+		<tr>
+		  <th scope="col">#</th>
+		  <th scope="col">Car Name</th>
+		  <th scope="col">Location</th>
+		  <th scope="col">Price</th>
+		  <th scope="col">Action</th>
+		</tr>
+	  </thead>
+	  <tbody>
+		{% if  inquires %}
+			{% for inquiry in inquires %}
+			<tr>
+				<th scope="row">{{ inquiry.id }}</th> 
+				<td>{{ inquiry.car_title }}</td>
+				<td>{{ inquiry.city }}</td>
+				<td>${{ inquiry.price }}</td>
+				<td><a href="{% url 'cars_detail'  inquiry.car_id%}" class="btn btn-outline-dark">View Car</a></td>
+			  </tr>
+			{% endfor %}
+		{% else %}
+			<tr>
+				<th rowspan="5"> NO DATA </th>
+			</tr>
+		{% endif %}
+
+	  </tbody>
+	</table>
+</div>
+{% endblock %}

@@ -1,0 +1,513 @@
+[
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$180000$S2v3lnVTq2Qf$Cnxvvuwcfep4MQUDSpf/5DmyHZM/IBuTuLeT2o/LySc=",
+        "last_login": "2021-07-23T20:29:59.563",
+        "is_superuser": true,
+        "username": "ricardo",
+        "first_name": "",
+        "last_name": "",
+        "email": "squall2501@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2021-07-16T23:07:54.883",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$180000$C9gJnFKThk7I$rkGq36m3SDCe6QC0s9K2nxZN12Ait6k97x8T/YzMlhY=",
+        "last_login": "2021-07-21T22:58:17.511",
+        "is_superuser": false,
+        "username": "humberto",
+        "first_name": "",
+        "last_name": "",
+        "email": "humberto266@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2021-07-21T22:42:08.786",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "!Lr5F8dsOrIuc3CmMYnESlpZbXqCmOjzgjn6qpt87",
+        "last_login": "2021-07-23T20:01:48.124",
+        "is_superuser": false,
+        "username": "antonio",
+        "first_name": "antonio",
+        "last_name": "morales",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2021-07-23T19:50:29.589",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "sessions.session",
+    "pk": "4tyhl6hdy53finxnq432snryatx4qfpi",
+    "fields": {
+        "session_data": "Y2VhNzI4YjQzYWMzMTNhMzdhNzI4OTUzMWQ3Y2Y2YTI4YjE5OWMwMTp7InNvY2lhbGFjY291bnRfc3RhdGUiOlt7InByb2Nlc3MiOiJsb2dpbiIsInNjb3BlIjoiIiwiYXV0aF9wYXJhbXMiOiIifSwibXRYajlQNUhhY3RsIl19",
+        "expire_date": "2021-08-04T23:40:56.818"
+    }
+},
+{
+    "model": "sites.site",
+    "fields": {
+        "domain": "localhost:8000",
+        "name": "localhost:8000"
+    }
+},
+{
+    "model": "socialaccount.socialapp",
+    "pk": 1,
+    "fields": {
+        "provider": "facebook",
+        "name": "Facebook Login",
+        "client_id": "651136472947805",
+        "secret": "80742b7340aa2f67b3567fe4c15458fd",
+        "key": "",
+        "sites": [
+            [
+                "localhost:8000"
+            ]
+        ]
+    }
+},
+{
+    "model": "socialaccount.socialapp",
+    "pk": 2,
+    "fields": {
+        "provider": "google",
+        "name": "Google Login",
+        "client_id": "181517883936-oe32csjr0crr76i34dts6nn1782dbujc.apps.googleusercontent.com",
+        "secret": "QiiYvs5qXMgaEyg2VmnAIIta",
+        "key": "",
+        "sites": [
+            [
+                "localhost:8000"
+            ]
+        ]
+    }
+},
+{
+    "model": "socialaccount.socialaccount",
+    "pk": 1,
+    "fields": {
+        "user": [
+            "antonio"
+        ],
+        "provider": "google",
+        "uid": "103536769360714165726",
+        "last_login": "2021-07-23T20:01:48.113",
+        "date_joined": "2021-07-23T19:50:29.642",
+        "extra_data": "{\"id\": \"103536769360714165726\", \"name\": \"antonio morales\", \"given_name\": \"antonio\", \"family_name\": \"morales\", \"picture\": \"https://lh3.googleusercontent.com/a/AATXAJwEXXFqxdrgCH_1kOQzqrjGryG0uh_J8h9bhqPa=s96-c\", \"locale\": \"es\"}"
+    }
+},
+{
+    "model": "socialaccount.socialtoken",
+    "pk": 1,
+    "fields": {
+        "app": 2,
+        "account": 1,
+        "token": "ya29.a0ARrdaM8BHVoZukU0ssYfa22ALObqldalNKjZkhzM392jWGG9U3iTdCt9FdEt2DePiHdYkfz4gsnxMOa0DPiZ3tuSafsG9dw57JA069j2rCi_GQIlgRbpLFEKZ6nEL-DjDfvoP68Uv0s3SIYKJ21KYN5_1YtL",
+        "token_secret": "",
+        "expires_at": "2021-07-23T21:01:47.029"
+    }
+},
+{
+    "model": "pages.team",
+    "pk": 1,
+    "fields": {
+        "photo": "photos/2021/07/16/avatar-3.jpg",
+        "firstname": "Humberto",
+        "lastname": "morales",
+        "designation": "ingeneiro civil",
+        "facebook_link": "https://www.google.cl/",
+        "twittter_link": "https://www.google.cl/",
+        "google_plust_link": "https://www.google.cl/",
+        "created_date": "2021-07-16"
+    }
+},
+{
+    "model": "pages.team",
+    "pk": 2,
+    "fields": {
+        "photo": "photos/2021/07/16/avatar-10.jpg",
+        "firstname": "rosa",
+        "lastname": "garay",
+        "designation": "secretaria",
+        "facebook_link": "https://www.google.cl/",
+        "twittter_link": "https://www.google.cl/",
+        "google_plust_link": "https://www.google.cl/",
+        "created_date": "2021-07-16"
+    }
+},
+{
+    "model": "pages.team",
+    "pk": 3,
+    "fields": {
+        "photo": "photos/2021/07/16/avatar-1.jpg",
+        "firstname": "miguel",
+        "lastname": "carvajal",
+        "designation": "administrativo",
+        "facebook_link": "https://www.google.cl/",
+        "twittter_link": "https://www.google.cl/",
+        "google_plust_link": "https://www.google.cl/",
+        "created_date": "2021-07-16"
+    }
+},
+{
+    "model": "pages.team",
+    "pk": 4,
+    "fields": {
+        "photo": "photos/2021/07/16/avatar-4.jpg",
+        "firstname": "camila",
+        "lastname": "morales",
+        "designation": "envios",
+        "facebook_link": "https://www.google.cl/",
+        "twittter_link": "https://www.google.cl/",
+        "google_plust_link": "https://www.google.cl/",
+        "created_date": "2021-07-16"
+    }
+},
+{
+    "model": "pages.team",
+    "pk": 5,
+    "fields": {
+        "photo": "photos/2021/07/16/avatar-12.jpg",
+        "firstname": "alexis",
+        "lastname": "gararra",
+        "designation": "comunny manager",
+        "facebook_link": "https://www.google.cl/",
+        "twittter_link": "https://www.google.cl/",
+        "google_plust_link": "https://www.google.cl/",
+        "created_date": "2021-07-16"
+    }
+},
+{
+    "model": "cars.cars",
+    "pk": 1,
+    "fields": {
+        "car_title": "2017 Ferrari 488 GTB",
+        "state": "CA",
+        "color": "blanco",
+        "model": "488 GTB",
+        "year": 2003,
+        "condition": "nuevo",
+        "price": 200000,
+        "description": "<p>simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a t</p>",
+        "car_photo": "photos/2021/07/17/1902536891.jpg",
+        "car_photo_1": "photos/2021/07/17/1902536917.jpg",
+        "car_photo_2": "photos/2021/07/17/1902537043.jpg",
+        "car_photo_3": "photos/2021/07/17/1902537077.jpg",
+        "car_photo_4": "photos/2021/07/17/1902537082.jpg",
+        "features": "Cruise Control,Alarm System",
+        "body_Style": "mply dummy text of the",
+        "engine": "mply dummy text of the",
+        "transmission": "mply dummy text of the",
+        "interior": "mply dummy text of the",
+        "miles": 700,
+        "doors": "4",
+        "passengers": 2,
+        "vin_no": "mply dummy text of the",
+        "milage": 23,
+        "fuel_type": "mply dummy text of the",
+        "no_uf_owners": "mply dummy text of the",
+        "is_featured": true,
+        "created_date": "2021-07-17T15:29:25"
+    }
+},
+{
+    "model": "cars.cars",
+    "pk": 2,
+    "fields": {
+        "car_title": "2017 Ford Edge",
+        "state": "CO",
+        "color": "negro",
+        "model": "nuevo",
+        "year": 2006,
+        "condition": "nuevo",
+        "price": 2000000,
+        "description": "<p>simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a t</p>",
+        "car_photo": "photos/2021/07/17/1901478607.jpg",
+        "car_photo_1": "photos/2021/07/17/1901478618.jpg",
+        "car_photo_2": "photos/2021/07/17/1901478672.jpg",
+        "car_photo_3": "photos/2021/07/17/1901478646.jpg",
+        "car_photo_4": "photos/2021/07/17/1901478687.jpg",
+        "features": "Air Conditioning,Reversing Camera",
+        "body_Style": "printing a",
+        "engine": "printing a",
+        "transmission": "printing a",
+        "interior": "printing a",
+        "miles": 3223,
+        "doors": "4",
+        "passengers": 2,
+        "vin_no": "printing a",
+        "milage": 23,
+        "fuel_type": "printing a",
+        "no_uf_owners": "printing a",
+        "is_featured": false,
+        "created_date": "2021-07-17T15:33:42"
+    }
+},
+{
+    "model": "contacts.contact",
+    "pk": 1,
+    "fields": {
+        "first_name": "ricardo",
+        "last_name": "gutierrez",
+        "car_id": 2,
+        "customer_need": "I'm interested in this",
+        "car_title": "2017 Ford Edge",
+        "city": "santiago",
+        "state": "santiago",
+        "email": "info@lancenter.cl",
+        "phone": "3233223",
+        "message": "ejem,plo",
+        "user_id": 1,
+        "create_date": "2021-07-23T20:52:03.722"
+    }
+},
+{
+    "model": "contacts.contact",
+    "pk": 2,
+    "fields": {
+        "first_name": "ricardo",
+        "last_name": "gutierrez",
+        "car_id": 2,
+        "customer_need": "I'm interested in this",
+        "car_title": "2017 Ford Edge",
+        "city": "santiago",
+        "state": "santiago",
+        "email": "info@lancenter.cl",
+        "phone": "3233223",
+        "message": "ejem,plo",
+        "user_id": 1,
+        "create_date": "2021-07-23T20:52:26.264"
+    }
+},
+{
+    "model": "contacts.contact",
+    "pk": 3,
+    "fields": {
+        "first_name": "ricardo",
+        "last_name": "gutierrez",
+        "car_id": 2,
+        "customer_need": "I'm interested in this",
+        "car_title": "2017 Ford Edge",
+        "city": "santiago",
+        "state": "santiago",
+        "email": "info@lancenter.cl",
+        "phone": "",
+        "message": "",
+        "user_id": 1,
+        "create_date": "2021-07-23T22:31:57.499"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2021-07-16T23:28:08.798",
+        "user": [
+            "ricardo"
+        ],
+        "content_type": [
+            "pages",
+            "team"
+        ],
+        "object_id": "1",
+        "object_repr": "Humberto",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2021-07-16T23:36:27.178",
+        "user": [
+            "ricardo"
+        ],
+        "content_type": [
+            "pages",
+            "team"
+        ],
+        "object_id": "1",
+        "object_repr": "Humberto",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Photo\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2021-07-16T23:38:18.189",
+        "user": [
+            "ricardo"
+        ],
+        "content_type": [
+            "pages",
+            "team"
+        ],
+        "object_id": "2",
+        "object_repr": "rosa",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2021-07-16T23:38:38.217",
+        "user": [
+            "ricardo"
+        ],
+        "content_type": [
+            "pages",
+            "team"
+        ],
+        "object_id": "3",
+        "object_repr": "miguel",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2021-07-16T23:38:56.538",
+        "user": [
+            "ricardo"
+        ],
+        "content_type": [
+            "pages",
+            "team"
+        ],
+        "object_id": "4",
+        "object_repr": "camila",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2021-07-16T23:39:24.500",
+        "user": [
+            "ricardo"
+        ],
+        "content_type": [
+            "pages",
+            "team"
+        ],
+        "object_id": "5",
+        "object_repr": "alexis",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2021-07-17T15:33:32.950",
+        "user": [
+            "ricardo"
+        ],
+        "content_type": [
+            "cars",
+            "cars"
+        ],
+        "object_id": "1",
+        "object_repr": "Cars object (1)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2021-07-17T15:35:09.015",
+        "user": [
+            "ricardo"
+        ],
+        "content_type": [
+            "cars",
+            "cars"
+        ],
+        "object_id": "2",
+        "object_repr": "Cars object (2)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2021-07-21T23:34:09.511",
+        "user": [
+            "ricardo"
+        ],
+        "content_type": [
+            "socialaccount",
+            "socialapp"
+        ],
+        "object_id": "1",
+        "object_repr": "Facebook Login",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2021-07-21T23:34:44.678",
+        "user": [
+            "ricardo"
+        ],
+        "content_type": [
+            "sites",
+            "site"
+        ],
+        "object_id": "1",
+        "object_repr": "localhost:8000",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Domain name\", \"Display name\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2021-07-23T19:47:15.513",
+        "user": [
+            "ricardo"
+        ],
+        "content_type": [
+            "socialaccount",
+            "socialapp"
+        ],
+        "object_id": "2",
+        "object_repr": "Google Login",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+}
+]
