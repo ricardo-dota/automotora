@@ -21,9 +21,12 @@ from decouple import config
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 #BASE_DIR = Path(__file__).resolve().parent.parent
 #BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-root = lambda * x: os.path.join(os.path.abspath(os.path.dirname(__file__)), *x) 
+SITE_ROOT = os.path.dirname(__file__)
+
+def get_root_path_to(directory):
+    return os.path.join(SITE_ROOT, directory).replace('\\', '/')
 
 
 # Quick-start development settings - unsuitable for production
@@ -83,7 +86,7 @@ ROOT_URLCONF = 'carzone.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [root('templates')] ,
+        'DIRS': get_root_path_to('templates') ,
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
