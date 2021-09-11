@@ -83,10 +83,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'carzone.urls'
 
+SITE_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': get_root_path_to('templates') ,
+        'DIRS': os.path.join(SITE_ROOT, "templates"),
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
