@@ -23,6 +23,9 @@ from decouple import config
 #BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+root = lambda * x: os.path.join(os.path.abspath(os.path.dirname(__file__)), *x) 
+
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
@@ -80,7 +83,7 @@ ROOT_URLCONF = 'carzone.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')] ,
+        'DIRS': [root('templates')] ,
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
