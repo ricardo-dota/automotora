@@ -14,6 +14,10 @@ from pathlib import Path
 import os
 import dj_database_url
 
+
+from decouple import config
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -22,14 +26,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-iuk3ei2-=6sjjjfwre@qx2$oscihfm2=&jxxg@r8-b(h-mauz0'
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = config('DEBUG', default=True, cast=bool)
 
 LOGIN_REDIRECT_URL = 'dashboard'
 
-ALLOWED_HOSTS = ['arcane-falls-21543.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -55,6 +59,8 @@ INSTALLED_APPS = [
     # Providers
     'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.google',
+
+    'admin_honeypot',
 ]
 
 MIDDLEWARE = [
@@ -91,22 +97,27 @@ WSGI_APPLICATION = 'carzone.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
+"""
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': config('DB_NAME'),
+        'USER': config('DB_USER'),
+        'PASSWORD':config('DB_PASSWORD'),
+        'HOST':'localhost'
+    }
+}
+"""
 
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.postgresql',
-#        'NAME': 'carzone_db',
-#        'USER': 'postgres',
-#        'PASSWORD':'123456',
-#        'HOST':'localhost'
-#    }
-#}
 
 # HEROKU
-#DATABASES = {'default': dj_database_url.config(default='postgres://liiaxskrrcdyfe:81b50403abf93abcef847aa73129911840ba132ef5ca228548cd6bf23e06a23f@ec2-52-1-20-236.compute-1.amazonaws.com:5432/da0pj6m6gc3k3b')}
+DATABASES = {'default': dj_database_url.config(
+            default= config('DATABSE_URL')
+        )
+    }
 
 # DATOS DE MI BASE DE DATOS EN LOCALHOST
-DATABASES = {'default': dj_database_url.config(default='postgres://postgres:123456@localhost/carzone_db')}
+#DATABASES = {'default': dj_database_url.config(default='postgres://postgres:123456@localhost/carzone_db')}
 
 
 # Password validation
@@ -174,11 +185,11 @@ SITE_ID = 1
 
 
 #SMTP CONFIG 
-EMAIL_HOST          ='smtp.gmail.com'
-EMAIL_PORT          = 587
-EMAIL_HOST_USER     =''
-EMAIL_HOST_PASSWORD =''
-EMAIL_USE_TLS       = True
+EMAIL_HOST          = config('EMAIL_HOST')
+EMAIL_PORT          = config('EMAIL_PORT', cast = int)
+EMAIL_HOST_USER     = config('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+EMAIL_USE_TLS       = config('EMAIL_USE_TLS', default=True, cast=bool)
 
 
 
