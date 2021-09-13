@@ -23,11 +23,6 @@ from decouple import config
 #BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-SITE_ROOT = os.path.dirname(__file__)
-
-def get_root_path_to(directory):
-    return os.path.join(SITE_ROOT, directory).replace('\\', '/')
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
